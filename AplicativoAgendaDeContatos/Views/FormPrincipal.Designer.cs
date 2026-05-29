@@ -1,168 +1,337 @@
-﻿namespace AplicativoAgendaDeContatos
+﻿namespace AplicativoAgendaDeContatos.Views
 {
     partial class FormPrincipal
     {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
+            {
                 components.Dispose();
+            }
             base.Dispose(disposing);
         }
 
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
-            // ── Controles ──
-            txtBusca = new TextBox();
-            cmbBusca = new ComboBox();
-            cmbFiltro = new ComboBox();
-            lstContatos = new ListBox();
-            btnNovo = new Button();
-
-            lblNomeLabel = new Label();
-            lblNomeValor = new Label();
-            lblTelefoneLabel = new Label();
-            lblTelefoneValor = new Label();
-            lblEmailLabel = new Label();
-            lblEmailValor = new Label();
-            lblCidadeLabel = new Label();
-            lblCidadeValor = new Label();
-            lblTipoLabel = new Label();
-            lblTipoValor = new Label();
-            lblExtraLabel = new Label();
-            lblExtraValor = new Label();
-
-            btnEditar = new Button();
-            btnExcluir = new Button();
-
             pnlEsquerda = new Panel();
+            btnNovo = new Button();
+            lstContatos = new ListBox();
+            cmbFiltro = new ComboBox();
+            cmbBusca = new ComboBox();
+            textBusca = new TextBox();
             pnlDireita = new Panel();
-
+            btnExcluir = new Button();
+            btnEditar = new Button();
+            lblExtraValor = new Label();
+            lblExtraLabel = new Label();
+            lblTipoValor = new Label();
+            lblTipoLabel = new Label();
+            lblCidadeValor = new Label();
+            lblCidadeLabel = new Label();
+            lblEmailValor = new Label();
+            lblEmailLabel = new Label();
+            lblTelefoneValor = new Label();
+            lblTelefoneLabel = new Label();
+            lblNomeValor = new Label();
+            LblNomeLabel = new Label();
+            pnlEsquerda.SuspendLayout();
+            pnlDireita.SuspendLayout();
             SuspendLayout();
-
-            // ── Form ──
-            Text = "Agenda de Contatos";
-            Size = new Size(800, 520);
-            MinimumSize = new Size(800, 520);
-            StartPosition = FormStartPosition.CenterScreen;
-            BackColor = Color.FromArgb(245, 245, 243);
-            Font = new Font("Segoe UI", 9.5f);
-            Load += FormPrincipal_Load;
-
-            // ── Painel esquerdo ──
-            pnlEsquerda.Size = new Size(260, 480);
-            pnlEsquerda.Location = new Point(10, 10);
+            // 
+            // pnlEsquerda
+            // 
             pnlEsquerda.BackColor = Color.White;
             pnlEsquerda.BorderStyle = BorderStyle.FixedSingle;
-
-            txtBusca.Location = new Point(10, 10);
-            txtBusca.Size = new Size(150, 26);
-            txtBusca.PlaceholderText = "Pesquisar...";
-            txtBusca.TextChanged += txtBusca_TextChanged;
-
-            cmbBusca.Location = new Point(164, 10);
-            cmbBusca.Size = new Size(84, 26);
-            cmbBusca.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbBusca.Items.AddRange(new string[] { "Nome", "Cidade" });
-            cmbBusca.SelectedIndex = 0;
-            cmbBusca.SelectedIndexChanged += cmbBusca_SelectedIndexChanged;
-
-            cmbFiltro.Location = new Point(10, 46);
-            cmbFiltro.Size = new Size(238, 26);
-            cmbFiltro.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbFiltro.SelectedIndexChanged += cmbFiltro_SelectedIndexChanged;
-
-            lstContatos.Location = new Point(10, 82);
-            lstContatos.Size = new Size(238, 310);
-            lstContatos.BorderStyle = BorderStyle.None;
-            lstContatos.ItemHeight = 22;
-            lstContatos.SelectedIndexChanged += lstContatos_SelectedIndexChanged;
-
-            btnNovo.Location = new Point(10, 402);
-            btnNovo.Size = new Size(238, 34);
-            btnNovo.Text = "+ Novo Contato";
+            pnlEsquerda.Controls.Add(btnNovo);
+            pnlEsquerda.Controls.Add(lstContatos);
+            pnlEsquerda.Controls.Add(cmbFiltro);
+            pnlEsquerda.Controls.Add(cmbBusca);
+            pnlEsquerda.Controls.Add(textBusca);
+            pnlEsquerda.Location = new Point(10, 10);
+            pnlEsquerda.Name = "pnlEsquerda";
+            pnlEsquerda.Size = new Size(260, 480);
+            pnlEsquerda.TabIndex = 0;
+            // 
+            // btnNovo
+            // 
             btnNovo.BackColor = Color.FromArgb(83, 74, 183);
-            btnNovo.ForeColor = Color.White;
             btnNovo.FlatStyle = FlatStyle.Flat;
-            btnNovo.FlatAppearance.BorderSize = 0;
+            btnNovo.ForeColor = Color.White;
+            btnNovo.Location = new Point(10, 402);
+            btnNovo.Name = "btnNovo";
+            btnNovo.Size = new Size(238, 34);
+            btnNovo.TabIndex = 4;
+            btnNovo.Text = "+ Novo Contato";
+            btnNovo.UseVisualStyleBackColor = false;
             btnNovo.Click += btnNovo_Click;
-
-            pnlEsquerda.Controls.AddRange(new Control[]
-                { txtBusca, cmbBusca, cmbFiltro, lstContatos, btnNovo });
-
-            // ── Painel direito ──
-            pnlDireita.Size = new Size(490, 480);
-            pnlDireita.Location = new Point(280, 10);
+            // 
+            // lstContatos
+            // 
+            lstContatos.BorderStyle = BorderStyle.None;
+            lstContatos.FormattingEnabled = true;
+            lstContatos.Location = new Point(10, 82);
+            lstContatos.Name = "lstContatos";
+            lstContatos.Size = new Size(238, 300);
+            lstContatos.TabIndex = 3;
+            lstContatos.SelectedIndexChanged += lstContatos_SelectedIndexChanged;
+            // 
+            // cmbFiltro
+            // 
+            cmbFiltro.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbFiltro.FormattingEnabled = true;
+            cmbFiltro.Location = new Point(10, 46);
+            cmbFiltro.Name = "cmbFiltro";
+            cmbFiltro.Size = new Size(238, 28);
+            cmbFiltro.TabIndex = 2;
+            cmbFiltro.SelectedIndexChanged += cmbFiltro_SelectedIndexChanged;
+            // 
+            // cmbBusca
+            // 
+            cmbBusca.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBusca.FormattingEnabled = true;
+            cmbBusca.Items.AddRange(new object[] { "Nome", "Cidade" });
+            cmbBusca.Location = new Point(164, 10);
+            cmbBusca.Name = "cmbBusca";
+            cmbBusca.Size = new Size(84, 28);
+            cmbBusca.TabIndex = 1;
+            cmbBusca.SelectedIndexChanged += cmbBusca_SelectedIndexChanged;
+            // 
+            // textBusca
+            // 
+            textBusca.Location = new Point(10, 10);
+            textBusca.Name = "textBusca";
+            textBusca.PlaceholderText = "Pesquisar...";
+            textBusca.Size = new Size(150, 27);
+            textBusca.TabIndex = 0;
+            textBusca.TextChanged += textBusca_TextChanged;
+            // 
+            // pnlDireita
+            // 
             pnlDireita.BackColor = Color.White;
             pnlDireita.BorderStyle = BorderStyle.FixedSingle;
-            pnlDireita.Padding = new Padding(20);
-
-            int y = 20;
-            int labelX = 20;
-            int valorX = 120;
-            int larguraValor = 340;
-            int espacamento = 36;
-
-            void AdicionarCampo(Label lbl, Label val, string texto, ref int posY)
-            {
-                lbl.Text = texto;
-                lbl.Location = new Point(labelX, posY);
-                lbl.Size = new Size(90, 22);
-                lbl.ForeColor = Color.Gray;
-
-                val.Text = "-";
-                val.Location = new Point(valorX, posY);
-                val.Size = new Size(larguraValor, 22);
-                val.ForeColor = Color.FromArgb(30, 30, 30);
-                val.Font = new Font("Segoe UI", 9.5f, FontStyle.Regular);
-
-                pnlDireita.Controls.Add(lbl);
-                pnlDireita.Controls.Add(val);
-                posY += espacamento;
-            }
-
-            AdicionarCampo(lblNomeLabel, lblNomeValor, "Nome:", ref y);
-            AdicionarCampo(lblTelefoneLabel, lblTelefoneValor, "Telefone:", ref y);
-            AdicionarCampo(lblEmailLabel, lblEmailValor, "E-mail:", ref y);
-            AdicionarCampo(lblCidadeLabel, lblCidadeValor, "Cidade:", ref y);
-            AdicionarCampo(lblTipoLabel, lblTipoValor, "Tipo:", ref y);
-            AdicionarCampo(lblExtraLabel, lblExtraValor, "", ref y);
-
-            btnEditar.Location = new Point(20, 420);
-            btnEditar.Size = new Size(110, 34);
-            btnEditar.Text = "Editar";
-            btnEditar.FlatStyle = FlatStyle.Flat;
-            btnEditar.Enabled = false;
-            btnEditar.Click += btnEditar_Click;
-
-            btnExcluir.Location = new Point(144, 420);
-            btnExcluir.Size = new Size(110, 34);
-            btnExcluir.Text = "Excluir";
-            btnExcluir.FlatStyle = FlatStyle.Flat;
-            btnExcluir.ForeColor = Color.FromArgb(163, 45, 45);
+            pnlDireita.Controls.Add(btnExcluir);
+            pnlDireita.Controls.Add(btnEditar);
+            pnlDireita.Controls.Add(lblExtraValor);
+            pnlDireita.Controls.Add(lblExtraLabel);
+            pnlDireita.Controls.Add(lblTipoValor);
+            pnlDireita.Controls.Add(lblTipoLabel);
+            pnlDireita.Controls.Add(lblCidadeValor);
+            pnlDireita.Controls.Add(lblCidadeLabel);
+            pnlDireita.Controls.Add(lblEmailValor);
+            pnlDireita.Controls.Add(lblEmailLabel);
+            pnlDireita.Controls.Add(lblTelefoneValor);
+            pnlDireita.Controls.Add(lblTelefoneLabel);
+            pnlDireita.Controls.Add(lblNomeValor);
+            pnlDireita.Controls.Add(LblNomeLabel);
+            pnlDireita.Location = new Point(280, 10);
+            pnlDireita.Name = "pnlDireita";
+            pnlDireita.Size = new Size(490, 480);
+            pnlDireita.TabIndex = 1;
+            // 
+            // btnExcluir
+            // 
             btnExcluir.Enabled = false;
+            btnExcluir.FlatStyle = FlatStyle.Flat;
+            btnExcluir.ForeColor = Color.Black;
+            btnExcluir.Location = new Point(144, 420);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(110, 34);
+            btnExcluir.TabIndex = 13;
+            btnExcluir.Text = "Editar";
+            btnExcluir.UseVisualStyleBackColor = true;
             btnExcluir.Click += btnExcluir_Click;
-
-            pnlDireita.Controls.AddRange(new Control[] { btnEditar, btnExcluir });
-
-            // ── Adiciona ao form ──
-            Controls.AddRange(new Control[] { pnlEsquerda, pnlDireita });
-
+            // 
+            // btnEditar
+            // 
+            btnEditar.Enabled = false;
+            btnEditar.FlatStyle = FlatStyle.Flat;
+            btnEditar.ForeColor = Color.FromArgb(163, 45, 45);
+            btnEditar.Location = new Point(20, 420);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(110, 34);
+            btnEditar.TabIndex = 12;
+            btnEditar.Text = "Excluir";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
+            // 
+            // lblExtraValor
+            // 
+            lblExtraValor.AutoSize = true;
+            lblExtraValor.ForeColor = Color.FromArgb(30, 30, 30);
+            lblExtraValor.Location = new Point(120, 200);
+            lblExtraValor.Name = "lblExtraValor";
+            lblExtraValor.Size = new Size(50, 20);
+            lblExtraValor.TabIndex = 11;
+            lblExtraValor.Text = "label1";
+            // 
+            // lblExtraLabel
+            // 
+            lblExtraLabel.AutoSize = true;
+            lblExtraLabel.ForeColor = Color.Gray;
+            lblExtraLabel.Location = new Point(20, 200);
+            lblExtraLabel.Name = "lblExtraLabel";
+            lblExtraLabel.Size = new Size(33, 20);
+            lblExtraLabel.TabIndex = 10;
+            lblExtraLabel.Text = "      ";
+            // 
+            // lblTipoValor
+            // 
+            lblTipoValor.AutoSize = true;
+            lblTipoValor.ForeColor = Color.FromArgb(30, 30, 30);
+            lblTipoValor.Location = new Point(120, 164);
+            lblTipoValor.Name = "lblTipoValor";
+            lblTipoValor.Size = new Size(50, 20);
+            lblTipoValor.TabIndex = 9;
+            lblTipoValor.Text = "label1";
+            // 
+            // lblTipoLabel
+            // 
+            lblTipoLabel.AutoSize = true;
+            lblTipoLabel.ForeColor = Color.Gray;
+            lblTipoLabel.Location = new Point(20, 164);
+            lblTipoLabel.Name = "lblTipoLabel";
+            lblTipoLabel.Size = new Size(42, 20);
+            lblTipoLabel.TabIndex = 8;
+            lblTipoLabel.Text = "Tipo:";
+            lblTipoLabel.Click += lblTipoLabel_Click;
+            // 
+            // lblCidadeValor
+            // 
+            lblCidadeValor.AutoSize = true;
+            lblCidadeValor.ForeColor = Color.FromArgb(30, 30, 30);
+            lblCidadeValor.Location = new Point(120, 128);
+            lblCidadeValor.Name = "lblCidadeValor";
+            lblCidadeValor.Size = new Size(50, 20);
+            lblCidadeValor.TabIndex = 7;
+            lblCidadeValor.Text = "label1";
+            // 
+            // lblCidadeLabel
+            // 
+            lblCidadeLabel.AutoSize = true;
+            lblCidadeLabel.ForeColor = Color.Gray;
+            lblCidadeLabel.Location = new Point(20, 128);
+            lblCidadeLabel.Name = "lblCidadeLabel";
+            lblCidadeLabel.Size = new Size(59, 20);
+            lblCidadeLabel.TabIndex = 6;
+            lblCidadeLabel.Text = "Cidade:";
+            // 
+            // lblEmailValor
+            // 
+            lblEmailValor.AutoSize = true;
+            lblEmailValor.ForeColor = Color.FromArgb(30, 30, 30);
+            lblEmailValor.Location = new Point(120, 92);
+            lblEmailValor.Name = "lblEmailValor";
+            lblEmailValor.Size = new Size(50, 20);
+            lblEmailValor.TabIndex = 5;
+            lblEmailValor.Text = "label1";
+            // 
+            // lblEmailLabel
+            // 
+            lblEmailLabel.AutoSize = true;
+            lblEmailLabel.ForeColor = Color.Gray;
+            lblEmailLabel.Location = new Point(20, 92);
+            lblEmailLabel.Name = "lblEmailLabel";
+            lblEmailLabel.Size = new Size(55, 20);
+            lblEmailLabel.TabIndex = 4;
+            lblEmailLabel.Text = "E-mail:";
+            // 
+            // lblTelefoneValor
+            // 
+            lblTelefoneValor.AutoSize = true;
+            lblTelefoneValor.ForeColor = Color.FromArgb(30, 30, 30);
+            lblTelefoneValor.Location = new Point(120, 56);
+            lblTelefoneValor.Name = "lblTelefoneValor";
+            lblTelefoneValor.Size = new Size(50, 20);
+            lblTelefoneValor.TabIndex = 3;
+            lblTelefoneValor.Text = "label1";
+            // 
+            // lblTelefoneLabel
+            // 
+            lblTelefoneLabel.AutoSize = true;
+            lblTelefoneLabel.ForeColor = Color.Gray;
+            lblTelefoneLabel.Location = new Point(20, 56);
+            lblTelefoneLabel.Name = "lblTelefoneLabel";
+            lblTelefoneLabel.Size = new Size(69, 20);
+            lblTelefoneLabel.TabIndex = 2;
+            lblTelefoneLabel.Text = "Telefone:";
+            // 
+            // lblNomeValor
+            // 
+            lblNomeValor.AutoSize = true;
+            lblNomeValor.ForeColor = Color.FromArgb(30, 30, 30);
+            lblNomeValor.Location = new Point(120, 20);
+            lblNomeValor.Name = "lblNomeValor";
+            lblNomeValor.Size = new Size(50, 20);
+            lblNomeValor.TabIndex = 1;
+            lblNomeValor.Text = "label1";
+            // 
+            // LblNomeLabel
+            // 
+            LblNomeLabel.AutoSize = true;
+            LblNomeLabel.ForeColor = Color.Gray;
+            LblNomeLabel.Location = new Point(20, 20);
+            LblNomeLabel.Name = "LblNomeLabel";
+            LblNomeLabel.Size = new Size(53, 20);
+            LblNomeLabel.TabIndex = 0;
+            LblNomeLabel.Text = "Nome:";
+            // 
+            // FormPrincipal
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(245, 245, 243);
+            ClientSize = new Size(782, 473);
+            Controls.Add(pnlDireita);
+            Controls.Add(pnlEsquerda);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Name = "FormPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Agenda de Contatos";
+            Load += FormPrincipal_Load;
+            pnlEsquerda.ResumeLayout(false);
+            pnlEsquerda.PerformLayout();
+            pnlDireita.ResumeLayout(false);
+            pnlDireita.PerformLayout();
             ResumeLayout(false);
         }
 
-        private Panel pnlEsquerda, pnlDireita;
-        private TextBox txtBusca;
+        #endregion
+
+        private Panel pnlEsquerda;
         private ComboBox cmbBusca;
+        private TextBox textBusca;
         private ComboBox cmbFiltro;
         private ListBox lstContatos;
-        private Button btnNovo, btnEditar, btnExcluir;
-        private Label lblNomeLabel, lblNomeValor;
-        private Label lblTelefoneLabel, lblTelefoneValor;
-        private Label lblEmailLabel, lblEmailValor;
-        private Label lblCidadeLabel, lblCidadeValor;
-        private Label lblTipoLabel, lblTipoValor;
-        private Label lblExtraLabel, lblExtraValor;
+        private Button btnNovo;
+        private Panel pnlDireita;
+        private Label lblTelefoneLabel;
+        private Label lblNomeValor;
+        private Label LblNomeLabel;
+        private Label lblTipoLabel;
+        private Label lblCidadeValor;
+        private Label lblCidadeLabel;
+        private Label lblEmailValor;
+        private Label lblEmailLabel;
+        private Label lblTelefoneValor;
+        private Button btnExcluir;
+        private Button btnEditar;
+        private Label lblExtraValor;
+        private Label lblExtraLabel;
+        private Label lblTipoValor;
     }
 }

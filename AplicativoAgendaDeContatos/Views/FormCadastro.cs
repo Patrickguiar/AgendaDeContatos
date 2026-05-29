@@ -1,21 +1,19 @@
 ﻿using AgendaContatos.Models;
 using AplicativoAgendaDeContatos.Controller;
 
-namespace AplicativoAgendaDeContatos
+namespace AplicativoAgendaDeContatos.Views
 {
     public partial class FormCadastro : Form
     {
         private readonly ContatoController _controller;
         private readonly Contato? _contatoEditando;
 
-        // Novo contato
         public FormCadastro(ContatoController controller)
         {
             InitializeComponent();
             _controller = controller;
         }
 
-        // Editar contato existente
         public FormCadastro(ContatoController controller, Contato contato)
         {
             InitializeComponent();
@@ -36,7 +34,7 @@ namespace AplicativoAgendaDeContatos
         {
             txtNome.Text = c.Nome;
             txtTelefone.Text = c.Telefone;
-            txtEmail.Text = c.Email;
+            textEmail.Text = c.Email;
             txtCidade.Text = c.Endereco?.Cidade ?? "";
             cmbTipo.SelectedItem = c.GetTipo();
 
@@ -78,7 +76,7 @@ namespace AplicativoAgendaDeContatos
                               ?? new ContatoPessoal();
                 contato.Nome = txtNome.Text;
                 contato.Telefone = txtTelefone.Text;
-                contato.Email = txtEmail.Text;
+                contato.Email = textEmail.Text;
                 contato.Endereco = endereco;
                 contato.Apelido = txtExtra.Text;
 
@@ -94,7 +92,7 @@ namespace AplicativoAgendaDeContatos
                               ?? new ContatoProfissional();
                 contato.Nome = txtNome.Text;
                 contato.Telefone = txtTelefone.Text;
-                contato.Email = txtEmail.Text;
+                contato.Email = textEmail.Text;
                 contato.Endereco = endereco;
                 contato.Empresa = partes.Length > 0 ? partes[0] : "";
                 contato.Cargo = partes.Length > 1 ? partes[1] : "";
@@ -114,5 +112,9 @@ namespace AplicativoAgendaDeContatos
             DialogResult = DialogResult.Cancel;
             Close();
         }
+
+        private void lblTelefone_Click(object sender, EventArgs e) { }
+
+   
     }
 }

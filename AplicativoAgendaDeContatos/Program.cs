@@ -1,4 +1,8 @@
+
+using AplicativoAgendaDeContatos.Views;
+
 namespace AplicativoAgendaDeContatos
+
 {
     internal static class Program
     {
