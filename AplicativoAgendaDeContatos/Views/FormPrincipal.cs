@@ -1,12 +1,14 @@
 ﻿using AgendaContatos.Models;
 using AgendaContatos.Patterns;
 using AplicativoAgendaDeContatos.Controller;
+using System.Diagnostics;
 
 namespace AplicativoAgendaDeContatos.Views
 {
     public partial class FormPrincipal : Form
     {
         private readonly ContatoController _controller = new ContatoController();
+        // Guarda qual contato está selecionado na lista no momento.
         private Contato? _contatoSelecionado;
 
         public FormPrincipal()
@@ -22,6 +24,7 @@ namespace AplicativoAgendaDeContatos.Views
             LimparDetalhe();
         }
 
+        // Método central da View: busca, filtra e exibe a lista de contatos.
         private void CarregarLista()
         {
             List<Contato> contatos = _controller.ListarTodos();
@@ -123,6 +126,7 @@ namespace AplicativoAgendaDeContatos.Views
             }
         }
 
+        //Os três eventos abaixo fazem a mesma coisa: recarregar a lista
         private void textBusca_TextChanged(object sender, EventArgs e)
         {
             CarregarLista();

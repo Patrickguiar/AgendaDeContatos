@@ -147,12 +147,12 @@
             // 
             btnExcluir.Enabled = false;
             btnExcluir.FlatStyle = FlatStyle.Flat;
-            btnExcluir.ForeColor = Color.Black;
+            btnExcluir.ForeColor = Color.Red;
             btnExcluir.Location = new Point(144, 420);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(110, 34);
             btnExcluir.TabIndex = 13;
-            btnExcluir.Text = "Editar";
+            btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = true;
             btnExcluir.Click += btnExcluir_Click;
             // 
@@ -160,12 +160,12 @@
             // 
             btnEditar.Enabled = false;
             btnEditar.FlatStyle = FlatStyle.Flat;
-            btnEditar.ForeColor = Color.FromArgb(163, 45, 45);
+            btnEditar.ForeColor = Color.Gray;
             btnEditar.Location = new Point(20, 420);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(110, 34);
             btnEditar.TabIndex = 12;
-            btnEditar.Text = "Excluir";
+            btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
             btnEditar.Click += btnEditar_Click;
             // 

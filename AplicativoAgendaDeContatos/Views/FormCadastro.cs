@@ -6,6 +6,8 @@ namespace AplicativoAgendaDeContatos.Views
     public partial class FormCadastro : Form
     {
         private readonly ContatoController _controller;
+
+        //Guarda o contato sendo editado.Se for null, significa que é um cadastro novo.
         private readonly Contato? _contatoEditando;
 
         public FormCadastro(ContatoController controller)
@@ -14,6 +16,7 @@ namespace AplicativoAgendaDeContatos.Views
             _controller = controller;
         }
 
+        // Construtor usado ao editar um contato já existente
         public FormCadastro(ContatoController controller, Contato contato)
         {
             InitializeComponent();
@@ -23,13 +26,15 @@ namespace AplicativoAgendaDeContatos.Views
 
         private void FormCadastro_Load(object sender, EventArgs e)
         {
+            // Popula o ComboBox com as opções de tipo de contato
             cmbTipo.Items.AddRange(new string[] { "Pessoal", "Profissional" });
             cmbTipo.SelectedIndex = 0;
 
+            // Se veio um contato para editar, preenche os campos com seus dados
             if (_contatoEditando != null)
                 PreencherCampos(_contatoEditando);
         }
-
+        // Preenche os campos do formulário com os dados do contato recebido
         private void PreencherCampos(Contato c)
         {
             txtNome.Text = c.Nome;
@@ -68,7 +73,13 @@ namespace AplicativoAgendaDeContatos.Views
                 return;
             }
 
-            var endereco = new Endereco { Cidade = txtCidade.Text };
+            var endereco = new Endereco
+            {
+                Id = _contatoEditando?.Endereco?.Id ?? 0,
+                Cidade = txtCidade.Text,
+                Rua = _contatoEditando?.Endereco?.Rua ?? "",
+                Estado = _contatoEditando?.Endereco?.Estado ?? ""
+            };
 
             if (cmbTipo.SelectedItem?.ToString() == "Pessoal")
             {
@@ -107,6 +118,7 @@ namespace AplicativoAgendaDeContatos.Views
             Close();
         }
 
+        // Fecha o formulário sem salvar nada
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;

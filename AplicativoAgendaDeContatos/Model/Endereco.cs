@@ -6,18 +6,18 @@ namespace AgendaContatos.Models
 {
     public class Endereco
     {
-        public string Rua { get; set; }
-        public string Numero { get; set; }
-        public string Bairro { get; set; }
-        public string Cidade { get; set; }
-        public string Estado { get; set; }
+        public int Id { get; set; }
+        public string Rua { get; set; } = "";
+        public string Numero { get; set; } = "";
+        public string Bairro { get; set; } = "";
+        public string Cidade { get; set; } = "";
+        public string Estado { get; set; } = "";
 
         public Endereco() { }
 
         public Endereco(string rua, string numero, string bairro, string cidade, string estado)
         {
-            
-            if(string.IsNullOrWhiteSpace(rua) || string.IsNullOrWhiteSpace(numero) || string.IsNullOrWhiteSpace(bairro) ||
+            if (string.IsNullOrWhiteSpace(rua) || string.IsNullOrWhiteSpace(numero) || string.IsNullOrWhiteSpace(bairro) ||
                string.IsNullOrWhiteSpace(cidade) || string.IsNullOrWhiteSpace(estado))
             {
                 throw new ArgumentException("Todos os campos do endereço devem ser preenchidos.");
